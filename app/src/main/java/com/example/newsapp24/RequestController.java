@@ -3,7 +3,14 @@ package com.example.newsapp24;
 import android.content.Context;
 import android.widget.Toast;
 
+import com.example.newsapp24.Models.News;
 import com.example.newsapp24.Models.NewsResponse;
+import com.example.newsapp24.offlinecaching.NewsCache;
+import com.example.newsapp24.offlinecaching.NewsConverter;
+import com.example.newsapp24.offlinecaching.NewsDao;
+import com.example.newsapp24.offlinecaching.NewsDatabase;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,6 +27,9 @@ public class RequestController {
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
+    NewsDao newsDao;
+
+
     public void getNews(FetchData listner, String category, String query){
         CallNewsApi callNewsApi = retrofit.create(CallNewsApi.class);
         Call<NewsResponse> call = callNewsApi.getNews("us", category, query, context.getString(R.string.api_key));
@@ -32,6 +42,7 @@ public class RequestController {
                         Toast.makeText(context, "Error!", Toast.LENGTH_SHORT).show();
                     }
                     listner.fetchData(response.body().getArticles(), response.body().getStatus());
+//                    newsDao.insertNews((List<NewsCache>) convert(response.body().getArticles()));
                 }
 
                 @Override

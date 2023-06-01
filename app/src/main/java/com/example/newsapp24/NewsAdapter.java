@@ -2,6 +2,7 @@ package com.example.newsapp24;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -16,10 +17,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
 
     private Context context;
     private List<News> newsList;
+    private DetailsListner listner;
 
-    public NewsAdapter(Context context, List<News> newsList) {
+    public NewsAdapter(Context context, List<News> newsList, DetailsListner listner) {
         this.context = context;
         this.newsList = newsList;
+        this.listner = listner;
     }
 
 
@@ -40,6 +43,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
                     .load(newsList.get(position).getUrlToImage())
                     .into(holder.img_news);
         }
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listner.onNewsClick(newsList.get(position));
+            }
+        });
 
     }
 

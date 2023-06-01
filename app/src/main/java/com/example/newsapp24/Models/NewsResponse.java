@@ -1,8 +1,9 @@
 package com.example.newsapp24.Models;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class NewsResponse {
+public class NewsResponse implements Serializable {
     String status = "";
     int totalResults = 0;
     List<News> articles = null;
