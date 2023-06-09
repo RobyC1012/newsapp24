@@ -1,5 +1,6 @@
 package com.example.newsapp24;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.newsapp24.Interfaces.DetailsListner;
 import com.example.newsapp24.Models.News;
 import com.squareup.picasso.Picasso;
 
@@ -33,7 +35,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NewsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull NewsViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.title.setText(newsList.get(position).getTitle());
         holder.source.setText(newsList.get(position).getSource().getName());
 

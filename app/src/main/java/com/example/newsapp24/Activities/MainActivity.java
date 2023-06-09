@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements DetailsListner{
     RecyclerView recyclerView;
     NewsAdapter adapter;
     ProgressDialog loadingDialog;
-    //NewsDao newsDao = NewsDatabase.getInstance(this).newsDao();
     SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
