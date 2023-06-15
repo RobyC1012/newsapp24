@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/primary_80"
     tools:context=".Activities.SplashScreenActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:src="@drawable/news"
+        android:layout_gravity="center"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="NewsApp24"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bungee"
+        android:textSize="34sp"
+        android:textStyle="italic"></TextView>
+
+    <TextView
+        android:id="@+id/sloganText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Your Trusted Source for 24/7 News Coverage"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"></TextView>
+
+</LinearLayout>

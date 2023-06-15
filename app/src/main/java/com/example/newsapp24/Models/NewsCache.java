@@ -1,13 +1,13 @@
-package com.example.newsapp24.offlinecaching;
+package com.example.newsapp24.Models;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import com.example.newsapp24.Models.Source;
+import java.io.Serializable;
 
 @Entity(tableName = "news_cache")
-public class NewsCache {
+public class NewsCache implements Serializable {
     @PrimaryKey(autoGenerate = true)
     Integer id;
     @ColumnInfo(name = "sourceId")

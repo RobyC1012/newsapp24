@@ -1,7 +1,8 @@
-package com.example.newsapp24;
+package com.example.newsapp24.Utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newsapp24.Interfaces.DetailsListner;
 import com.example.newsapp24.Models.News;
+import com.example.newsapp24.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -50,6 +52,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
             @Override
             public void onClick(View view) {
                 listner.onNewsClick(newsList.get(position));
+            }
+        });
+
+        holder.cardView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                listner.onNewsLongPressed(newsList.get(position));
+                return true;
             }
         });
 

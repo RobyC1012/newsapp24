@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">NewsApp24</string>
     <string name="api_key">d3956de72e264a6f9f5d2d97d787bcc0</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">News Preferences</string>
+    <string name="theme">Theme Preference</string>
+
+    <!-- News Preferences -->
+    <string name="language_title">Language</string>
+    <string name="country_title">Country</string>
+    <string name="category_title">Category</string>
+
 </resources>

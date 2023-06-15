@@ -1,4 +1,4 @@
-package com.example.newsapp24;
+package com.example.newsapp24.Utils;
 
 
 import android.view.View;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.newsapp24.R;
 
 public class NewsViewHolder extends RecyclerView.ViewHolder {
     TextView title, source;

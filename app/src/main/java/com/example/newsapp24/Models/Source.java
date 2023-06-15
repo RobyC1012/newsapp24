@@ -6,6 +6,11 @@ public class Source implements Serializable {
     String id = "";
     String name = "";
 
+    public Source(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public String getId() {
         return id;
     }
@@ -21,4 +26,6 @@ public class Source implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }
