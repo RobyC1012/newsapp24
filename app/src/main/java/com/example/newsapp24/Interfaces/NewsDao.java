@@ -1,4 +1,4 @@
-package com.example.newsapp24.OfflineCaching;
+package com.example.newsapp24.Interfaces;
 
 import androidx.room.Dao;
 import androidx.room.Insert;

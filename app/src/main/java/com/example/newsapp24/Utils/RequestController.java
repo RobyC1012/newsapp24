@@ -59,9 +59,6 @@ public class RequestController {
                         }
                         else {
                             List<News> newsList = response.body().getArticles();
-                            /*if (newsList != null && !newsList.isEmpty()) {
-                                new InsertAsyncTask(newsDatabase).execute(newsList);
-                            }*/
                             listner.fetchData(response.body().getArticles(), response.body().getStatus());
                         }
 

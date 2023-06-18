@@ -6,6 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.newsapp24.Interfaces.NewsDao;
 import com.example.newsapp24.Models.NewsCache;
 import com.example.newsapp24.Models.SavedForLaterNews;
 
